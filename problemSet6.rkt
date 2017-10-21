@@ -30,4 +30,5 @@
 
 "problem 2b"
 ;function takes in a list of base 10 digits and converts them to one integer
-;'(1 2 3 4 5) --> 12345 
+;'(1 2 3 4 5) --> 12345
+;
