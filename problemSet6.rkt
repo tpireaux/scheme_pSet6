@@ -136,4 +136,22 @@
 
 "problem 3c"
 ;return set of tuples (x, y) such that x is in a and y is in b
+
+"problem 4"
+;takes a list as input and returns a list
+;if the input list is comprised of nested list the contents will be unested in the output
+(define (nestless lst)
+  (cond ((null? lst) '())
+        ((list? (car lst)) (append (nestless (car lst))
+                                   (nestless (cdr lst))))
+        (else (cons (car lst) (nestless (cdr lst))))))
+"test"
+"(nestless '())"
+(nestless '())
+"(nestless '(1 2 3 4 5))"
+(nestless '(1 2 3 4 5))
+"(nestless '(1 2 '(3 4 5) 6 7 8))"
+(nestless '(1 2 '(3 4 5) 6 7 8))
+  
+
           
